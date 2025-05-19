@@ -1,21 +1,22 @@
 /*
--- save frequently used sql code in stored procedured in database - day to day activity
+-- Store commonly used SQL routines as stored procedures for daily operations
 
-Stored Procedure : load Silver layer (Bronze -> Silver)
+Stored Procedure: Load Silver Layer (Bronze -> Silver)
 
-Script purpose :
-    This stored procedure performs the ETL process to populate the silver schema tables from the bronze schema.
-    It performs the following actions:
-        truncates the silver tables before loading data.
-        Insert transformed and cleansed data from bronze into silver tables
-parameters:
+Purpose:
+    This stored procedure handles the ETL workflow to load data from the bronze schema into the silver schema.
+    Key steps include:
+        - Clearing existing data in silver tables before loading
+        - Inserting cleaned and transformed records from bronze tables into silver tables
+
+Parameters:
     None
-    This stored procedure does not accept any parameters or return any values
+    This procedure does not take any input parameters or return output values.
 
-usage example:
-     Exec silver.load_silver
-
+Example usage:
+    EXEC silver.load_silver;
 */
+
 
 EXEC silver.load_silver
 GO
