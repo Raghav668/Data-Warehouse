@@ -1,22 +1,22 @@
 /*
--- save frequently used sql codein stored procedured in database - day to day activity
+-- Store commonly used SQL routines as stored procedures for daily operations
 
-Stored Procedure : load Bronze layer (Source -> Bronze)
+Stored Procedure: Load Data into Bronze Layer (Source → Bronze)
 
-Script purpose :
-    This stored procedure loads data into bronze schema from external csv files.
-    It performs the following actions:
-        truncates the bronze tables before loading data.
-        uses the bulk insert command to load data from csv files to bronze tables
+Purpose:
+    This stored procedure imports data from external CSV files into the bronze schema tables.
+    Key steps include:
+      - Clearing existing data by truncating the bronze tables
+      - Using BULK INSERT to efficiently load CSV data into the respective bronze tables
 
-parameters:
+Parameters:
     None
-    This stored procedure does not accept any parameters or return any values
+    This procedure does not take any input parameters nor returns any outputs.
 
-usage example:
-     Exec bronze.load_bronze
-
+Usage:
+    EXEC bronze.load_bronze;
 */
+
 
 EXEC bronze.load_bronze -- to execute in simple way
 
