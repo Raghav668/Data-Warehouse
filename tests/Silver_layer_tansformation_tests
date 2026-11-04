@@ -4,6 +4,8 @@ script purpose:
 -- Data standardization and consistency
 -- check for nulls or negative numbers
 -- check for Invalid Date orders
+-- This is changed
+
 */
 select prd_id,count(*)
 from silver.crm_prd_info
