@@ -10,6 +10,9 @@ Purpose:
 
 Usage:
    These views are designed for direct querying to support reporting and analytics tasks.
+
+
+   --- This is also changed
 */
 
 If OBJECT_ID('gold.dim_customers','V') is not NULL
